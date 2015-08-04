@@ -11,7 +11,10 @@ gem 'mocha', :require => false
 gem 'debugger', platform: :mri_19
 gem 'byebug', platform: [:mri_20, :mri_21]
 
-if ENV['RAILS'] == '4.1' || ENV['RAILS'] == '4'
+if ENV['RAILS'] == '4.2'
+  gem 'activerecord', '~>4.2.3'
+  gem 'railties', '~>4.2.3'
+elsif ENV['RAILS'] == '4.1' || ENV['RAILS'] == '4'
   gem 'activerecord', '~> 4.1.0'
   gem 'railties', '~> 4.1.0'
 elsif ENV['RAILS'] == '4.0'
